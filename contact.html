@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - XQZENTRA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f6f6f6;
+    }
+    header {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    main {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    button {
+      margin-top: 20px;
+      background: #33cc33;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #thanks {
+      background: #d4edda;
+      color: #155724;
+      padding: 10px;
+      border-left: 4px solid #28a745;
+      border-radius: 6px;
+      display: none;
+      margin-top: 20px;
+    }
+    a {
+      color: #33cc33;
+      text-decoration: none;
+    }
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>XQZENTRA - Contact Admin</h1>
+  </header>
+  <main>
+    <h2>Liên hệ quản trị viên</h2>
+    <p>Gửi tin nhắn ẩn danh cho đội ngũ điều hành. Chúng tôi không ghi nhận email hay IP.</p>
+
+    <form id="contactForm">
+      <label for="message">Nội dung</label>
+      <textarea id="message" rows="6" required></textarea>
+      <button type="submit">Gửi liên hệ</button>
+      <div id="thanks">Tin nhắn của bạn đã được ghi nhận.</div>
+    </form>
+
+    <p><a href="index.html">← Trở lại trang chủ</a></p>
+  </main>
+  <footer>
+    © 2025 XQZENTRA FORUM. Không theo dõi người dùng, không lưu vết.
+  </footer>
+  <script>
+    const form = document.getElementById('contactForm');
+    const thanks = document.getElementById('thanks');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      thanks.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
